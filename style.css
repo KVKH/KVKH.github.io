@@ -7,6 +7,10 @@ color: green;
 text-align: center;
 }
 
+ul {
+align: center;
+}
+
 p {
 text-align: center;
 font-size: 20px;
