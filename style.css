@@ -2,10 +2,14 @@ body {
 background-color: white;
 }
 
+/*Example Comment*/
+
+/*
 h1 {
 color: green;
 text-align: center;
 }
+*/
 
 ul.vittu {
 list-style-type: square;
