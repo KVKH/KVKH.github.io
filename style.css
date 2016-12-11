@@ -11,7 +11,7 @@ text-align: center;
 }
 */
 
-ul.vittu {
+.vittu {
 list-style-type: square;
 position: static;
 border: 3px solid #73AD21;
