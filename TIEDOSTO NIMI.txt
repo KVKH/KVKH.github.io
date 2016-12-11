@@ -57,3 +57,54 @@ Message: <textarea rows="15" cols="60" name="sMsg"></textarea>
 <input type="submit" value="Click to send">
 </body>
 </html>
+
+
+
+<script>
+function StartScripts()
+{
+    TestCanvas()
+    DrawImages()
+}
+function TestCanvas()
+{
+    if(!document.createElement("canvas"))
+    {
+        alert('Your current browser does not support the content of this webpage')
+    }
+}
+function DrawImages()
+{
+    var imageCount = 1
+    for (var i = imageCount; i > 0; i--) {
+        var cn = "Canvas" + i
+        DrawCanvas(cn, 500, 500)
+    }
+}
+function DrawCanvas(canvasNumber, customWidth, customHeight)
+{
+            var normalHeight = 500
+            var normalWidth = 500
+            var fullScreen = 0
+            if (typeof customWidth == "undefined") { iwidth = normalHeight }
+            if (typeof customHeight == "undefined") { iheight = normalWidth }
+            var canvas = document.getElementById(canvasNumber)
+            if (canvas.width == normalWidth ) { fullScreen = true } else { fullScreen = false }
+            if (fullScreen == true)
+            {
+                canvas.width = window.innerWidth
+                canvas.height = window.innerHeight
+            }
+            else {
+                canvas.width = normalWidth
+                canvas.height = normalHeight
+            }
+                    
+        var context = canvas.getContext("2d")
+        var img = document.getElementById("testimg")
+        context.drawImage(testimg,0,0,canvas.width,canvas.height)
+}
+</script>
+<canvas id="Canvas1" width="1px" height="500px" onCLick="DrawCanvas('Canvas1', 500, 500)">
+<img src="C:\Users\never\Desktop\homepage\testimg.png" id="testimg">
+</canvas>
